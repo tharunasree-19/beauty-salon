@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e823b0;
+            --secondary-color: #4b0082;
+            --background-color: #f4f4f8;
+            --text-color: #333;
+            --white: #ffffff;
+            --accent-color: #8a4fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 100vh;
+            color: var(--white);
+            padding: 2rem;
+        }
+
+        .services-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services-header {
+            margin-bottom: 3rem;
+        }
+
+        .services-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .services-header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-card-image {
+            transform: scale(1.05);
+        }
+
+        .service-card-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .service-card-content h3 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .book-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="services-wrapper">
+        <div class="services-header">
+            <h1>Salon Services</h1>
+            <p>Discover our expertly crafted services designed to enhance your natural beauty and boost your confidence.</p>
+        </div>
+
+        <div class="services-container">
+            <div class="service-card">
+                <img src="../styles/haircut.webp" alt="Haircut" class="service-card-image">
+                <div class="service-card-content">
+                    <h3>Haircut</h3>
+                    <p>Transform your look with precision cuts tailored to your unique style by our expert stylists.</p>
+                    <button class="book-btn">Book Consultation</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="../styles/makeup.jpg" alt="Makeup" class="service-card-image">
+                <div class="service-card-content">
+                    <h3>Makeup</h3>
+                    <p>Professional makeup application for every occasion, from natural day looks to glamorous evening styles.</p>
+                    <button class="book-btn">Book Session</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="../styles/skincare.avif" alt="Skincare" class="service-card-image">
+                <div class="service-card-content">
+                    <h3>Skincare</h3>
+                    <p>Rejuvenate and nourish your skin with our specialized treatments and personalized skincare routines.</p>
+                    <button class="book-btn">Book Treatment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

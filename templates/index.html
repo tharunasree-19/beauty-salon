@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #FF69B4, #8B008B, #000000);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .glass-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="text-white">
+    <div class="container mx-auto px-4 py-12 flex-grow flex items-center justify-center">
+        <div class="glass-container text-center max-w-2xl w-full">
+            <h1 class="text-5xl font-bold mb-4 text-pink-200 animate-pulse">
+                Beauty Salon
+            </h1>
+            <p class="text-2xl mb-8 text-white">Your Beauty, Our Passion</p>
+            
+            <div class="space-x-4 mb-8">
+                <a href="/login" class="bg-pink-600 text-white px-5 py-3 rounded-lg hover:bg-pink-700 transition duration-300 inline-block">
+                    Login
+                </a>
+                <a href="/register" class="bg-purple-600 text-white px-5 py-3 rounded-lg hover:bg-purple-700 transition duration-300 inline-block">
+                    Register
+                </a>
+                <a href="/services" class="bg-indigo-600 text-white px-5 py-3 rounded-lg hover:bg-indigo-700 transition duration-300 inline-block">
+                    Services
+                </a>
+            </div>
+            
+            <a href="/book" class="bg-pink-500 text-white text-xl px-8 py-4 rounded-lg hover:bg-pink-600 transition transform hover:scale-105 inline-block mb-8">
+                Book an Appointment
+            </a>
+            
+            <div class="bg-black/30 rounded-lg p-6 mt-8">
+                <h3 class="text-2xl font-semibold mb-4 text-pink-200">Owner Contact</h3>
+                <div class="space-y-2">
+                    <p><strong>Name:</strong> Golla Tharuna Sree</p>
+                    <p><strong>Phone:</strong> +91 9652314147</p>
+                    <p><strong>Email:</strong> gtharunasri19@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-black/50 py-6 text-center">
+        <p>&copy; 2025 Beauty Salon. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

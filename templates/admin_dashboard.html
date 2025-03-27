@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1f0219;
+            --secondary-color: #820059;
+            --background-color: #f8f4f8;
+            --text-color: #3a0e86;
+            --white: #ffffff;
+            --accent-color: #51083b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .admin-dashboard-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .admin-dashboard-header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .admin-dashboard-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .admin-dashboard-header p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .admin-dashboard-content {
+            padding: 2rem;
+        }
+
+        .admin-dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .admin-dashboard-item {
+            background: var(--background-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(75, 0, 130, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .admin-dashboard-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .admin-dashboard-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .admin-dashboard-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .admin-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        .admin-btn:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .admin-dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-dashboard-wrapper">
+        <div class="admin-dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <p>Manage Salon Operations and Services</p>
+        </div>
+        
+        <div class="admin-dashboard-content">
+            <div class="admin-dashboard-grid">
+                <div class="admin-dashboard-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Manage Services</h3>
+                    <button class="admin-btn">Configure</button>
+                </div>
+                
+                <div class="admin-dashboard-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Manage Appointments</h3>
+                    <button class="admin-btn">View & Edit</button>
+                </div>
+                
+                <div class="admin-dashboard-item">
+                    <i class="fas fa-users"></i>
+                    <h3>User Management</h3>
+                    <button class="admin-btn">Manage Users</button>
+                </div>
+                
+                <div class="admin-dashboard-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>View Reports</h3>
+                    <button class="admin-btn">Analytics</button>
+                </div>
+                
+                <div class="admin-dashboard-item">
+                    <i class="fas fa-bell"></i>
+                    <h3>Notifications</h3>
+                    <button class="admin-btn">Manage Alerts</button>
+                </div>
+                
+                <div class="admin-dashboard-item">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Billing</h3>
+                    <button class="admin-btn">Invoices</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
