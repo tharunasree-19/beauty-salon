@@ -1,0 +1,5 @@
+Flask
+Flask-MySQLdb
+PyMySQL
+boto3
+gunicorn
